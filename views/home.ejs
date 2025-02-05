@@ -1,0 +1,38 @@
+<% layout("/layouts/boilerplate") %>
+
+<style>
+  body {
+    background: linear-gradient(135deg, #ff4e50, #fc913a, #fcfc12);
+  }
+</style>
+
+<section
+  class="container d-flex flex-column flex-md-row align-items-center justify-content-between text-center text-md-start mt-5"
+>
+  <div class="col-md-6">
+    <h2 class="fw-medium display-4">Welcome to</h2>
+    <h1 class="display-2 fw-bold text-primary">RentSphere!</h1>
+    <p class="lead text-dark mt-3 fs-4">
+      Discover RentSphere: your gateway to exploring a world of stunning
+      properties, exotic vacation spots, and luxurious resorts. Unlock endless
+      possibilities and find the perfect destinations for your next adventure.
+    </p>
+  </div>
+  <div class="col-md-6 mt-4 mt-md-0">
+    <a href="/listings"
+      ><img
+        src="https://png.pngtree.com/png-clipart/20230927/original/pngtree-house-with-no-background-png-image_13001602.png"
+        alt="homepage-img"
+        class="img-fluid"
+    /></a>
+  </div>
+</section>
+
+<div class="mb-5">
+  <% if(!currUser) { %>
+  <a class="btn btn-primary me-3" href="/signup"><b>Sign Up</b></a>
+  <a class="btn btn-secondary" href="/login"><b>Log In</b></a>
+  <% } %> <% if(currUser) { %>
+  <a class="btn btn-primary me-3" href="/listings"><b>Explore !</b></a>
+  <% } %>
+</div>
